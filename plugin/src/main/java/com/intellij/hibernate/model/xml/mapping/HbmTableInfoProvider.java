@@ -1,15 +1,16 @@
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.persistence.model.TableInfoProvider;
-import com.intellij.util.xml.GenericAttributeValue;
-import com.intellij.util.xml.Convert;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.javaee.model.JavaeePersistenceORMResolveConverters;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.persistence.model.TableInfoProvider;
+import com.intellij.util.xml.Convert;
+import com.intellij.util.xml.GenericAttributeValue;
 
 /**
  * @author Gregory.Shrago
  */
-public interface HbmTableInfoProvider extends TableInfoProvider, CommonDomModelElement {
+public interface HbmTableInfoProvider extends TableInfoProvider, CommonDomModelElement
+{
   @Convert(JavaeePersistenceORMResolveConverters.TableResolver.class)
   GenericAttributeValue<String> getTableName();
 

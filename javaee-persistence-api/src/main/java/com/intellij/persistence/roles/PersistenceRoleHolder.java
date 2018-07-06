@@ -16,35 +16,38 @@
 
 package com.intellij.persistence.roles;
 
+import java.util.Collection;
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
 import com.intellij.javaee.model.role.ClassRoleManager;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.Key;
-import com.intellij.persistence.facet.PersistenceFacetBase;
 import com.intellij.persistence.model.PersistenceQuery;
 import com.intellij.psi.PsiClass;
-import javax.annotation.Nonnull;
+import consulo.java.persistence.module.extension.PersistenceModuleExtension;
 
-import java.util.Collection;
-import java.util.Map;
+public abstract class PersistenceRoleHolder
+{
+	public static final Key<PersistenceClassRole> PERSISTENCE_CLASS_ROLES_KEY = Key.create("PERSISTENCE_CLASS_ROLES_KEY");
+	public static final Key<Collection<PersistenceClassRole>> PERSISTENCE_ALL_ROLES_DATA_KEY = Key.create("PERSISTENCE_ALL_ROLES_DATA_KEY");
+	public static final Key<Map<PersistenceModuleExtension<?, ?>, Collection<PersistenceQuery>>> PERSISTENCE_ALL_QUERIES_DATA_KEY = Key.create("PERSISTENCE_ALL_QUERIES_DATA_KEY");
+	public static final Key<Map<PersistenceModuleExtension<?, ?>, Collection<PersistenceQuery>>> PERSISTENCE_ALL_NATIVE_QUERIES_DATA_KEY = Key.create("PERSISTENCE_ALL_NATIVE_QUERIES_DATA_KEY");
 
-public abstract class PersistenceRoleHolder {
-  public static final Key<PersistenceClassRole> PERSISTENCE_CLASS_ROLES_KEY = Key.create("PERSISTENCE_CLASS_ROLES_KEY");
-  public static final Key<Collection<PersistenceClassRole>> PERSISTENCE_ALL_ROLES_DATA_KEY = Key.create("PERSISTENCE_ALL_ROLES_DATA_KEY");
-  public static final Key<Map<PersistenceFacetBase, Collection<PersistenceQuery>>> PERSISTENCE_ALL_QUERIES_DATA_KEY = Key.create("PERSISTENCE_ALL_QUERIES_DATA_KEY");
-  public static final Key<Map<PersistenceFacetBase, Collection<PersistenceQuery>>> PERSISTENCE_ALL_NATIVE_QUERIES_DATA_KEY = Key.create("PERSISTENCE_ALL_NATIVE_QUERIES_DATA_KEY");
+	public static PersistenceRoleHolder getInstance(Project project)
+	{
+		return ServiceManager.getService(project, PersistenceRoleHolder.class);
+	}
 
-  public static PersistenceRoleHolder getInstance(Project project) {
-    return ServiceManager.getService(project, PersistenceRoleHolder.class);
-  }
+	@Nonnull
+	public abstract ClassRoleManager getClassRoleManager();
 
-  @Nonnull
-  public abstract ClassRoleManager getClassRoleManager();
+	@Nonnull
+	public abstract PersistenceClassRole[] getRoles(PsiClass aClass);
 
-  @Nonnull
-  public abstract PersistenceClassRole[] getRoles(PsiClass aClass);
-
-  @Nonnull
-  public abstract PersistenceClassRole[] getRolesNoRebuild(final PsiClass aClass);
+	@Nonnull
+	public abstract PersistenceClassRole[] getRolesNoRebuild(final PsiClass aClass);
 
 }

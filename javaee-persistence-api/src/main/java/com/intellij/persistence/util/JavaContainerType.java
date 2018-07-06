@@ -16,6 +16,7 @@
 
 package com.intellij.persistence.util;
 
+import com.intellij.pom.java.LanguageLevel;
 import com.intellij.psi.CommonClassNames;
 import com.intellij.psi.JavaPsiFacade;
 import com.intellij.psi.PsiElement;
@@ -46,7 +47,7 @@ public enum JavaContainerType {
 
   public PsiType createCollectionType(final PsiElement context, final PsiType elementType, final PsiType mapKeyType) throws IncorrectOperationException {
     return JavaPsiFacade.getInstance(context.getProject()).getElementFactory()
-      .createTypeFromText(getCollectionTypeText(PsiUtil.getLanguageLevel(context).hasEnumKeywordAndAutoboxing(), elementType.getCanonicalText(), mapKeyType == null? null : mapKeyType.getCanonicalText()), context);
+      .createTypeFromText(getCollectionTypeText(PsiUtil.getLanguageLevel(context).isAtLeast(LanguageLevel.JDK_1_5), elementType.getCanonicalText(), mapKeyType == null? null : mapKeyType.getCanonicalText()), context);
   }
 
   public String getCollectionTypeText(final boolean useGenerics, final String elementTypeName, final String mapKeyType) {

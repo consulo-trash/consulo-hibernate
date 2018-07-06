@@ -6,7 +6,7 @@ package com.intellij.hibernate.model.xml.impl.mapping;
 
 import com.intellij.hibernate.model.xml.mapping.HbmCollectionAttributeBase;
 import com.intellij.hibernate.model.xml.mapping.HbmContainer;
-import com.intellij.javaee.model.xml.impl.BaseImpl;
+import com.intellij.jam.model.common.BaseImpl;
 import com.intellij.openapi.util.Ref;
 import com.intellij.util.xml.DomElement;
 import com.intellij.util.xml.DomElementVisitor;

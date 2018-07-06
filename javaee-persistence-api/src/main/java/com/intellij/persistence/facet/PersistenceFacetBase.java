@@ -32,6 +32,7 @@ import com.intellij.util.descriptors.ConfigFileMetaData;
 /**
  * @author Gregory.Shrago
  */
+@Deprecated
 public abstract class PersistenceFacetBase<C extends PersistenceFacetConfiguration, Unit extends PersistencePackage>  {
                  
 

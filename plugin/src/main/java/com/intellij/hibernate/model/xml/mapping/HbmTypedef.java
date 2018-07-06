@@ -3,17 +3,18 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.intellij.hibernate.model.converters.MappingClassResolveConverter;
 import com.intellij.hibernate.model.converters.ParamValueConverter;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.psi.PsiClass;
 import com.intellij.util.xml.Convert;
 import com.intellij.util.xml.GenericAttributeValue;
-import com.intellij.util.xml.Required;
 import com.intellij.util.xml.NameValue;
-import javax.annotation.Nonnull;
-
-import java.util.List;
+import com.intellij.util.xml.Required;
 
 /**
  * hibernate-mapping-3.0.dtd:typedef interface.
@@ -23,7 +24,8 @@ import java.util.List;
  * 	contain parameters for parameterizable types.
  * </pre>
  */
-public interface HbmTypedef extends CommonDomModelElement {
+public interface HbmTypedef extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the name child.

@@ -1,9 +1,26 @@
 package com.intellij.hibernate.model.xml.impl.mapping;
 
+import gnu.trove.THashMap;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.intellij.hibernate.model.enums.AccessType;
-import com.intellij.hibernate.model.xml.mapping.*;
+import com.intellij.hibernate.model.xml.mapping.HbmClassBase;
+import com.intellij.hibernate.model.xml.mapping.HbmEmbeddedAttributeBase;
+import com.intellij.hibernate.model.xml.mapping.HbmHibernateMapping;
+import com.intellij.hibernate.model.xml.mapping.HbmImport;
+import com.intellij.hibernate.model.xml.mapping.HbmQuery;
+import com.intellij.hibernate.model.xml.mapping.HbmSqlQuery;
+import com.intellij.hibernate.model.xml.mapping.HbmTypedef;
 import com.intellij.hibernate.util.HibernateUtil;
-import com.intellij.javaee.model.xml.impl.RootBaseImpl;
+import com.intellij.jam.model.common.BaseImpl;
 import com.intellij.jpa.model.xml.impl.converters.ClassConverterBase;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.persistence.model.PersistenceListener;
@@ -18,18 +35,13 @@ import com.intellij.psi.util.CachedValueProvider;
 import com.intellij.psi.util.PropertyMemberType;
 import com.intellij.util.Consumer;
 import com.intellij.util.containers.BidirectionalMultiMap;
-import com.intellij.util.xml.GenericAttributeValue;
 import com.intellij.util.xml.DomUtil;
-import gnu.trove.THashMap;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import java.util.*;
+import com.intellij.util.xml.GenericAttributeValue;
 
 /**
  * @author Gregory.Shrago
  */
-public abstract class HbmHibernateMappingImpl extends RootBaseImpl implements HbmHibernateMapping, PersistenceMappingsModelHelper {
+public abstract class HbmHibernateMappingImpl extends BaseImpl implements HbmHibernateMapping, PersistenceMappingsModelHelper {
 
   private CachedValue<BidirectionalMultiMap<String, String>> myImportMapValue;
   private CachedValue<BidirectionalMultiMap<String, String>> myTypedefMapValue;

@@ -3,11 +3,12 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.javaee.model.xml.CommonDomModelElement;
-import com.intellij.util.xml.GenericAttributeValue;
+import java.util.List;
+
 import javax.annotation.Nonnull;
 
-import java.util.List;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.util.xml.GenericAttributeValue;
 
 /**
  * hibernate-mapping-3.0.dtd:natural-id interface.
@@ -16,7 +17,8 @@ import java.util.List;
  *  A natural-id element allows declaration of the unique business key 
  * </pre>
  */
-public interface HbmNaturalId extends CommonDomModelElement {
+public interface HbmNaturalId extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the mutable child.

@@ -5,11 +5,11 @@ package com.intellij.hibernate.model.xml.mapping;
 
 import javax.annotation.Nonnull;
 
-import com.intellij.util.xml.GenericAttributeValue;
-import com.intellij.util.xml.Required;
 import com.intellij.hibernate.model.enums.CacheIncludeType;
 import com.intellij.hibernate.model.enums.CacheUsageType;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.util.xml.GenericAttributeValue;
+import com.intellij.util.xml.Required;
 
 /**
  * hibernate-mapping-3.0.dtd:cache interface.
@@ -18,7 +18,8 @@ import com.intellij.javaee.model.xml.CommonDomModelElement;
  *  The cache element enables caching of an entity class. 
  * </pre>
  */
-public interface HbmCache extends CommonDomModelElement {
+public interface HbmCache extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the include child.

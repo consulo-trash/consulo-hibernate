@@ -3,19 +3,20 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.javaee.model.xml.CommonDomModelRootElement;
-import com.intellij.javaee.model.xml.converters.PackageNameConverter;
-import com.intellij.javaee.model.JavaeePersistenceORMResolveConverters;
-import com.intellij.util.xml.GenericAttributeValue;
-import com.intellij.util.xml.Convert;
-import com.intellij.persistence.model.PersistenceMappings;
-import com.intellij.hibernate.model.converters.CascadeTypeListConverter;
-import com.intellij.hibernate.model.enums.CascadeType;
-import com.intellij.hibernate.model.enums.AccessType;
-import com.intellij.psi.PsiPackage;
+import java.util.List;
+
 import javax.annotation.Nonnull;
 
-import java.util.List;
+import com.intellij.hibernate.model.converters.CascadeTypeListConverter;
+import com.intellij.hibernate.model.enums.AccessType;
+import com.intellij.hibernate.model.enums.CascadeType;
+import com.intellij.jam.model.common.CommonDomModelRootElement;
+import com.intellij.javaee.model.JavaeePersistenceORMResolveConverters;
+import com.intellij.javaee.model.xml.converters.PackageNameConverter;
+import com.intellij.persistence.model.PersistenceMappings;
+import com.intellij.psi.PsiJavaPackage;
+import com.intellij.util.xml.Convert;
+import com.intellij.util.xml.GenericAttributeValue;
 
 /**
  * hibernate-mapping-3.0.dtd:hibernate-mapping interface.
@@ -34,7 +35,7 @@ public interface HbmHibernateMapping extends CommonDomModelRootElement, Persiste
 	 */
 	@Nonnull
         @Convert(PackageNameConverter.class)
-        GenericAttributeValue<PsiPackage> getPackage();
+        GenericAttributeValue<PsiJavaPackage> getPackage();
 
 
 	/**

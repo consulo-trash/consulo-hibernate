@@ -3,21 +3,22 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.intellij.hibernate.model.converters.AttributeMemberConverter;
 import com.intellij.hibernate.model.converters.PropertyTypeResolvingConverter;
 import com.intellij.hibernate.model.enums.AccessType;
 import com.intellij.hibernate.model.enums.GeneratedType;
 import com.intellij.hibernate.model.enums.VersionUnsavedValueType;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.psi.PsiMember;
 import com.intellij.psi.PsiType;
 import com.intellij.util.xml.Attribute;
 import com.intellij.util.xml.Convert;
 import com.intellij.util.xml.GenericAttributeValue;
 import com.intellij.util.xml.Required;
-import javax.annotation.Nonnull;
-
-import java.util.List;
 
 /**
  * hibernate-mapping-3.0.dtd:version interface.

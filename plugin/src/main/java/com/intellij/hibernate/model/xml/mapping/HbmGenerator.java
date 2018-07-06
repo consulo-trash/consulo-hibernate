@@ -3,17 +3,18 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.intellij.hibernate.model.converters.GeneratorClassResolvingConverter;
 import com.intellij.hibernate.model.converters.ParamValueConverter;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.persistence.model.TableInfoProvider;
 import com.intellij.psi.PsiClass;
 import com.intellij.util.xml.Convert;
 import com.intellij.util.xml.GenericAttributeValue;
 import com.intellij.util.xml.Required;
-import com.intellij.persistence.model.TableInfoProvider;
-import javax.annotation.Nonnull;
-
-import java.util.List;
 
 /**
  * hibernate-mapping-3.0.dtd:generator interface.

@@ -3,18 +3,20 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
+import javax.annotation.Nonnull;
+
 import com.intellij.hibernate.model.converters.MappingClassResolveConverter;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.psi.PsiClass;
 import com.intellij.util.xml.Convert;
 import com.intellij.util.xml.GenericAttributeValue;
 import com.intellij.util.xml.Required;
-import javax.annotation.Nonnull;
 
 /**
  * hibernate-mapping-3.0.dtd:definition interface.
  */
-public interface HbmDefinition extends CommonDomModelElement {
+public interface HbmDefinition extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the class child.

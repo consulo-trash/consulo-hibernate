@@ -3,18 +3,20 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.util.xml.GenericAttributeValue;
-import com.intellij.util.xml.Required;
-import com.intellij.hibernate.model.enums.LockModeType;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import java.util.List;
+
 import javax.annotation.Nonnull;
 
-import java.util.List;
+import com.intellij.hibernate.model.enums.LockModeType;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.util.xml.GenericAttributeValue;
+import com.intellij.util.xml.Required;
 
 /**
  * hibernate-mapping-3.0.dtd:load-collection interface.
  */
-public interface HbmLoadCollection extends CommonDomModelElement {
+public interface HbmLoadCollection extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the alias child.

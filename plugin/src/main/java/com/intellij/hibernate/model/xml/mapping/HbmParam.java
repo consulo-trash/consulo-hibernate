@@ -3,10 +3,15 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.hibernate.model.converters.ParamNameConverter;
-import com.intellij.util.xml.*;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
 import javax.annotation.Nonnull;
+
+import com.intellij.hibernate.model.converters.ParamNameConverter;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.util.xml.Convert;
+import com.intellij.util.xml.GenericAttributeValue;
+import com.intellij.util.xml.GenericDomValue;
+import com.intellij.util.xml.NameValue;
+import com.intellij.util.xml.Required;
 
 /**
  * hibernate-mapping-3.0.dtd:param interface.

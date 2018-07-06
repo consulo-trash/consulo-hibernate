@@ -3,16 +3,17 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.intellij.hibernate.model.converters.MappingClassResolveConverter;
 import com.intellij.hibernate.model.enums.AccessType;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.psi.PsiClass;
 import com.intellij.util.xml.Convert;
 import com.intellij.util.xml.GenericAttributeValue;
 import com.intellij.util.xml.SubTagList;
-import javax.annotation.Nonnull;
-
-import java.util.List;
 
 /**
  * hibernate-mapping-3.0.dtd:composite-id interface.

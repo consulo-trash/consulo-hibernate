@@ -3,13 +3,14 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import javax.annotation.Nonnull;
+
+import com.intellij.hibernate.model.converters.MappingClassResolveConverter;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.psi.PsiClass;
+import com.intellij.util.xml.Convert;
 import com.intellij.util.xml.GenericAttributeValue;
 import com.intellij.util.xml.Required;
-import com.intellij.util.xml.Convert;
-import com.intellij.hibernate.model.converters.MappingClassResolveConverter;
-import javax.annotation.Nonnull;
 
 /**
  * hibernate-mapping-3.0.dtd:dialect-scope interface.
@@ -19,7 +20,8 @@ import javax.annotation.Nonnull;
  *     Hibernate dialect implementation.
  * </pre>
  */
-public interface HbmDialectScope extends CommonDomModelElement {
+public interface HbmDialectScope extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the simple content.

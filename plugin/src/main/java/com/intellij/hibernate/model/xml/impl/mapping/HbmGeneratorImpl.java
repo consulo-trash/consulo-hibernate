@@ -2,11 +2,11 @@ package com.intellij.hibernate.model.xml.impl.mapping;
 
 import com.intellij.hibernate.model.xml.mapping.HbmGenerator;
 import com.intellij.hibernate.model.xml.mapping.HbmParam;
-import com.intellij.javaee.model.xml.impl.BaseImpl;
+import com.intellij.jam.model.common.BaseImpl;
+import com.intellij.openapi.util.text.StringUtil;
+import com.intellij.util.ArrayUtil;
 import com.intellij.util.xml.GenericValue;
 import com.intellij.util.xml.ReadOnlyGenericValue;
-import com.intellij.util.ArrayUtil;
-import com.intellij.openapi.util.text.StringUtil;
 
 /**
  * @author Gregory.Shrago

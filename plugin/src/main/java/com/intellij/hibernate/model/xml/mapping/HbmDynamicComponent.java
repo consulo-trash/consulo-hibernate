@@ -3,14 +3,18 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.hibernate.model.enums.AccessType;
-import com.intellij.hibernate.model.converters.AttributeMemberConverter;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
-import com.intellij.util.xml.*;
-import com.intellij.psi.PsiMember;
+import java.util.List;
+
 import javax.annotation.Nonnull;
 
-import java.util.List;
+import com.intellij.hibernate.model.converters.AttributeMemberConverter;
+import com.intellij.hibernate.model.enums.AccessType;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.psi.PsiMember;
+import com.intellij.util.xml.Attribute;
+import com.intellij.util.xml.Convert;
+import com.intellij.util.xml.GenericAttributeValue;
+import com.intellij.util.xml.Required;
 
 /**
  * hibernate-mapping-3.0.dtd:dynamic-component interface.

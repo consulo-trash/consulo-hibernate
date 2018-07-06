@@ -1,9 +1,18 @@
 package com.intellij.hibernate.model.xml.impl.mapping;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.intellij.hibernate.model.enums.AccessType;
-import com.intellij.hibernate.model.xml.mapping.*;
-import com.intellij.javaee.model.xml.impl.BaseImpl;
+import com.intellij.hibernate.model.xml.mapping.HbmAttributeBase;
+import com.intellij.hibernate.model.xml.mapping.HbmAttributeVisitor;
+import com.intellij.hibernate.model.xml.mapping.HbmAttributeVisitorAdapter;
+import com.intellij.hibernate.model.xml.mapping.HbmHibernateMapping;
+import com.intellij.hibernate.model.xml.mapping.HbmPersistentObjectBase;
+import com.intellij.jam.model.common.BaseImpl;
 import com.intellij.persistence.facet.PersistencePackageDefaults;
 import com.intellij.persistence.model.PersistentAttribute;
 import com.intellij.persistence.model.helpers.PersistentObjectModelHelper;
@@ -14,10 +23,6 @@ import com.intellij.psi.util.PropertyMemberType;
 import com.intellij.util.xml.DomUtil;
 import com.intellij.util.xml.GenericValue;
 import com.intellij.util.xml.ReadOnlyGenericValue;
-import javax.annotation.Nonnull;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Gregory.Shrago

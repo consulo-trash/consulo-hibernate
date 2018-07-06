@@ -3,25 +3,26 @@
  */
 package com.intellij.hibernate;
 
-import com.intellij.hibernate.model.xml.config.HibernateConfiguration;
-import com.intellij.hibernate.model.xml.config.SessionFactory;
-import com.intellij.hibernate.model.xml.impl.config.SessionFactoryImpl;
-import com.intellij.hibernate.model.xml.impl.config.HibernateConfigurationImpl;
-import com.intellij.hibernate.model.HibernateConstants;
-import com.intellij.hibernate.highlighting.HibernateDomAnnotator;
-import com.intellij.hibernate.util.HibernateUtil;
-import com.intellij.hibernate.facet.HibernateFacet;
-import com.intellij.util.xml.DomFileDescription;
-import com.intellij.util.xml.highlighting.DomElementsAnnotator;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
-import com.intellij.javaee.model.xml.impl.BaseImpl;
-import com.intellij.psi.xml.XmlFile;
-import com.intellij.openapi.module.Module;
-import com.intellij.openapi.module.ModuleUtil;
+import java.util.Collections;
+import java.util.Set;
+
 import javax.annotation.Nonnull;
 
-import java.util.Set;
-import java.util.Collections;
+import com.intellij.hibernate.facet.HibernateFacet;
+import com.intellij.hibernate.highlighting.HibernateDomAnnotator;
+import com.intellij.hibernate.model.HibernateConstants;
+import com.intellij.hibernate.model.xml.config.HibernateConfiguration;
+import com.intellij.hibernate.model.xml.config.SessionFactory;
+import com.intellij.hibernate.model.xml.impl.config.HibernateConfigurationImpl;
+import com.intellij.hibernate.model.xml.impl.config.SessionFactoryImpl;
+import com.intellij.hibernate.util.HibernateUtil;
+import com.intellij.jam.model.common.BaseImpl;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.openapi.module.Module;
+import com.intellij.openapi.module.ModuleUtil;
+import com.intellij.psi.xml.XmlFile;
+import com.intellij.util.xml.DomFileDescription;
+import com.intellij.util.xml.highlighting.DomElementsAnnotator;
 
 /**
  * @author peter

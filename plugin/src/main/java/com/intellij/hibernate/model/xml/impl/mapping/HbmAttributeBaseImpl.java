@@ -1,29 +1,34 @@
 package com.intellij.hibernate.model.xml.impl.mapping;
 
+import java.util.Collections;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import com.intellij.hibernate.model.converters.AttributeMemberConverter;
 import com.intellij.hibernate.model.enums.AccessType;
 import com.intellij.hibernate.model.xml.mapping.*;
 import com.intellij.hibernate.util.HibernateUtil;
+import com.intellij.jam.model.common.BaseImpl;
+import com.intellij.jam.model.util.JamCommonUtil;
 import com.intellij.javaee.model.common.persistence.JavaeePersistenceConstants;
-import com.intellij.javaee.model.xml.impl.BaseImpl;
-import com.intellij.javaee.util.JamCommonUtil;
 import com.intellij.jpa.util.JpaUtil;
 import com.intellij.persistence.model.PersistentAttribute;
 import com.intellij.persistence.model.PersistentObject;
 import com.intellij.persistence.model.helpers.PersistentAttributeModelHelper;
-import com.intellij.psi.*;
+import com.intellij.psi.JavaPsiFacade;
+import com.intellij.psi.PsiClass;
+import com.intellij.psi.PsiClassType;
+import com.intellij.psi.PsiMember;
+import com.intellij.psi.PsiType;
 import com.intellij.util.Function;
 import com.intellij.util.NullableFunction;
 import com.intellij.util.containers.ContainerUtil;
 import com.intellij.util.xml.DomElement;
+import com.intellij.util.xml.DomUtil;
 import com.intellij.util.xml.GenericValue;
 import com.intellij.util.xml.MutableGenericValue;
-import com.intellij.util.xml.DomUtil;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import java.util.Collections;
-import java.util.List;
 
 /**
  * @author Gregory.Shrago

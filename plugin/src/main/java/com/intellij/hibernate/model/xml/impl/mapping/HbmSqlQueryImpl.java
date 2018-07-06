@@ -5,7 +5,7 @@
 package com.intellij.hibernate.model.xml.impl.mapping;
 
 import com.intellij.hibernate.model.xml.mapping.HbmSqlQuery;
-import com.intellij.javaee.model.xml.impl.BaseImpl;
+import com.intellij.jam.model.common.BaseImpl;
 import com.intellij.util.xml.GenericValue;
 
 /**

@@ -3,17 +3,22 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.hibernate.model.enums.OptimisticLockType;
-import com.intellij.hibernate.model.enums.PolymorphismType;
-import com.intellij.hibernate.model.enums.LazyType;
-import com.intellij.hibernate.model.converters.MappingClassResolveConverter;
-import com.intellij.hibernate.model.converters.LazyTypeConverter;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
-import com.intellij.psi.PsiClass;
-import com.intellij.util.xml.*;
+import java.util.List;
+
 import javax.annotation.Nonnull;
 
-import java.util.List;
+import com.intellij.hibernate.model.converters.LazyTypeConverter;
+import com.intellij.hibernate.model.converters.MappingClassResolveConverter;
+import com.intellij.hibernate.model.enums.LazyType;
+import com.intellij.hibernate.model.enums.OptimisticLockType;
+import com.intellij.hibernate.model.enums.PolymorphismType;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.psi.PsiClass;
+import com.intellij.util.xml.Attribute;
+import com.intellij.util.xml.Convert;
+import com.intellij.util.xml.GenericAttributeValue;
+import com.intellij.util.xml.GenericDomValue;
+import com.intellij.util.xml.SubTagList;
 
 /**
  * hibernate-mapping-3.0.dtd:class interface.

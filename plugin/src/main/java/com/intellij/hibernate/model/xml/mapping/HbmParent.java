@@ -5,9 +5,9 @@ package com.intellij.hibernate.model.xml.mapping;
 
 import javax.annotation.Nonnull;
 
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.util.xml.GenericAttributeValue;
 import com.intellij.util.xml.Required;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
 
 /**
  * hibernate-mapping-3.0.dtd:parent interface.
@@ -17,7 +17,8 @@ import com.intellij.javaee.model.xml.CommonDomModelElement;
  * the owning entity. 
  * </pre>
  */
-public interface HbmParent extends CommonDomModelElement {
+public interface HbmParent extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the name child.

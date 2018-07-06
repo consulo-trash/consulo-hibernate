@@ -3,11 +3,12 @@
 
 package com.intellij.hibernate.model.xml.mapping;
 
-import com.intellij.javaee.model.xml.CommonDomModelElement;
-import com.intellij.util.xml.GenericDomValue;
+import java.util.List;
+
 import javax.annotation.Nonnull;
 
-import java.util.List;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.util.xml.GenericDomValue;
 
 /**
  * hibernate-mapping-3.0.dtd:database-object interface.
@@ -25,7 +26,8 @@ import java.util.List;
  *         </database-object>
  * </pre>
  */
-public interface HbmDatabaseObject extends CommonDomModelElement {
+public interface HbmDatabaseObject extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the list of dialect-scope children.

@@ -6,7 +6,7 @@ package com.intellij.hibernate.model.xml.mapping;
 import javax.annotation.Nonnull;
 
 import com.intellij.hibernate.model.converters.PropertyTypeResolvingConverter;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.javaee.model.JavaeePersistenceORMResolveConverters;
 import com.intellij.psi.PsiType;
 import com.intellij.util.xml.Convert;
@@ -21,7 +21,8 @@ import com.intellij.util.xml.GenericDomValue;
  * value is not directly exposed to the application. 
  * </pre>
  */
-public interface HbmDiscriminator extends CommonDomModelElement {
+public interface HbmDiscriminator extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the not-null child.

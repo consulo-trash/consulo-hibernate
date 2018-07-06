@@ -3,18 +3,19 @@
  */
 package com.intellij.hibernate;
 
-import com.intellij.hibernate.model.xml.mapping.*;
-import com.intellij.hibernate.model.xml.impl.mapping.*;
-import com.intellij.hibernate.model.HibernateConstants;
+import javax.annotation.Nonnull;
+
 import com.intellij.hibernate.highlighting.HibernateDomAnnotator;
+import com.intellij.hibernate.model.HibernateConstants;
+import com.intellij.hibernate.model.xml.impl.mapping.*;
+import com.intellij.hibernate.model.xml.mapping.*;
 import com.intellij.hibernate.util.HibernateUtil;
+import com.intellij.jam.model.common.BaseImpl;
+import com.intellij.jam.model.common.CommonDomModelElement;
+import com.intellij.openapi.module.Module;
+import com.intellij.psi.xml.XmlFile;
 import com.intellij.util.xml.DomFileDescription;
 import com.intellij.util.xml.highlighting.DomElementsAnnotator;
-import com.intellij.javaee.model.xml.CommonDomModelElement;
-import com.intellij.javaee.model.xml.impl.BaseImpl;
-import com.intellij.psi.xml.XmlFile;
-import com.intellij.openapi.module.Module;
-import javax.annotation.Nonnull;
 
 /**
  * @author peter

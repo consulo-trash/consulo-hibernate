@@ -12,7 +12,7 @@ import com.intellij.hibernate.model.converters.LazyTypeConverter;
 import com.intellij.hibernate.model.enums.AccessType;
 import com.intellij.hibernate.model.enums.CascadeType;
 import com.intellij.hibernate.model.enums.LazyType;
-import com.intellij.jam.model.common.CommonModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.psi.PsiMember;
 import com.intellij.util.xml.Attribute;
 import com.intellij.util.xml.Convert;
@@ -23,7 +23,7 @@ import com.intellij.util.xml.Required;
 /**
  * @author Gregory.Shrago
  */
-public interface HbmContainer extends CommonModelElement, HbmTableInfoProvider {
+public interface HbmContainer extends CommonDomModelElement, HbmTableInfoProvider {
 
   HbmCollectionAttributeBase getContainedAttribute();
 

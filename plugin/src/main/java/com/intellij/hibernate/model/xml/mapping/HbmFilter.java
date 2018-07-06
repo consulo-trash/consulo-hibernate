@@ -5,7 +5,7 @@ package com.intellij.hibernate.model.xml.mapping;
 
 import javax.annotation.Nonnull;
 
-import com.intellij.javaee.model.xml.CommonDomModelElement;
+import com.intellij.jam.model.common.CommonDomModelElement;
 import com.intellij.util.xml.GenericAttributeValue;
 import com.intellij.util.xml.Required;
 import com.intellij.util.xml.Resolve;
@@ -17,7 +17,8 @@ import com.intellij.util.xml.Resolve;
  * 	FILTER element; used to apply a filter.
  * </pre>
  */
-public interface HbmFilter extends CommonDomModelElement {
+public interface HbmFilter extends CommonDomModelElement
+{
 
 	/**
 	 * Returns the value of the simple content.
